@@ -1,6 +1,6 @@
 Thanks for downloading this template!
 
-Template Name: Maxim
-Template URL: https://bootstrapmade.com/maxim-free-onepage-bootstrap-theme/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Template Name: Maine Banaya hai
+Template URL: https://www.instagram.com/developernick1/
+Author: Imaginar.in
+License: Owned By Developer Nick
