@@ -590,6 +590,7 @@ section {
   border-radius: 15px;
   text-align: center;
   border-bottom: 3px solid #fff;
+  margin-top: 50px;
 }
 .services .icon-box:hover {
   box-shadow: 0 2px 29px 0 rgba(37, 37, 37, 0.1);
