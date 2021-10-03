@@ -90,8 +90,45 @@ h1, h2, h3, h4, h5, h6 {
 #header .logo img {
   padding: 0;
   margin: 0;
-  max-height: 40px;
+  max-height: 70px;
 }
+
+.logo1{
+  height: 55px;
+  width: 50px;
+  position:absolute;
+  left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  top: 10px;
+}
+.logo2{
+  height: 60px;
+  width: 250px;
+  position:absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+
+  left: 110px;
+  display: flex;
+  top: 6px;
+  flex-direction: row;
+}
+
+.digital{
+ color: #3aafa9;
+}
+
+.edge{
+  color: #547b82;
+
+}
+
 @media (max-width: 992px) {
   #header {
     height: 60px;
@@ -406,6 +443,22 @@ section {
   margin-bottom: 0;
 }
 
+
+/*--------------------------------------------------------------
+# AboutUs Png Styling
+--------------------------------------------------------------*/
+
+.what_we_do{
+  height: 50px;
+  width: 50px;
+  position: relative;
+  top: 55px;
+}
+
+
+/*--------------------------------------------------------------
+# AboutUs Png Styling
+--------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -591,9 +644,12 @@ section {
   text-align: center;
   border-bottom: 3px solid #fff;
   margin-top: 50px;
+  cursor: pointer;
 }
 .services .icon-box:hover {
   box-shadow: 0 2px 29px 0 rgba(37, 37, 37, 0.1);
+  transform: scale(1.05);
+
 }
 .services .icon i {
   font-size: 48px;
@@ -1184,7 +1240,7 @@ section {
 --------------------------------------------------------------*/
 #footer {
   background: black;
-  padding: 0 0 30px 0;
+  padding: 0 0 0 0;
   color: #fff;
   font-size: 14px;
 }
@@ -1309,60 +1365,292 @@ section {
 
 /* Side Sticky Social Handler Start  */
 
-/* nav{
+
+#social-sidebar {
+  left: 0;
   position: fixed;
-  width: 70px;
-  margin-top: 150px;
-  transition: all 0.3s linear;
-  box-shadow: 2px 2px 8px 0px rgba(0,0,0,.4);
-}
-nav li{
-  height: 60px;
-  position:relative;
-}
-nav li a{
-  color: white;
+  top: 30%;
+  padding: 0;
+ }
+ #social-sidebar .ss-li:first-child a { border-top-right-radius: 5px; }
+ #social-sidebar .ss-li:last-child a { border-bottom-right-radius: 5px; }
+  
+ #social-sidebar a {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+     text-decoration: none;
   display: block;
-  height: 100%;
-  width: 100%;
-  line-height: 60px;
-  padding-left:25%;
-  border-bottom: 1px solid rgba(0,0,0,.4);
-  transition: all .3s linear;
-}
-nav li:nth-child(1) a{
-  background: #4267B2;
-}
-nav li:nth-child(2) a{
-  background: #25d366;
-}
-nav li:nth-child(3) a{
-  background: #E1306C;
-}
-nav li:nth-child(4) a{
-  background: #2867B2;
-}
-nav li a i{
-  position:absolute;
-  top: 17px;
-  left: 20px;
-  font-size: 27px;
-}
-ul li a span{
-  display: none;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-}
-a:hover {
-  z-index:1;
-  width: 200px;
-  border-bottom: 1px solid rgba(0,0,0,.5);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,.3);
-}
-ul li:hover a span{
-  padding-left: 30%;
+  height: 50px;
+  width: 50px;  
+  font-size: 24px;
+  line-height: 50px;
+  position: relative;
+  text-align: center;
+     cursor: pointer;
+ }
+ #social-sidebar a:hover span {
+  left: 120%;
+  opacity: 1;
+ }
+ #social-sidebar .ss-li {
+   list-style: none;
+   }
+
+
+ #social-sidebar a span {
+   font: 12px "Open Sans", sans-serif;
+   text-transform: uppercase;
+  border-radius: 3px;
+  line-height: 24px;
+  left: -100%;
+  margin-top: -16px;
+  opacity: 0;
+  padding: 4px 8px;
+  position: absolute;
+  transition: opacity .3s, left .4s;
+  top: 50%;
+  z-index: -1;
+ }
+  
+ #social-sidebar a span:before {
+  content: "";
   display: block;
-} */
- 
+  height: 8px;
+   width: 8px;
+  left: -4px;
+  margin-top: -4px;
+  position: absolute;
+  top: 50%;
+  transform: rotate(45deg);
+ }
+  
+ #social-sidebar a[class*="facebook"]:hover,
+ #social-sidebar a[class*="facebook"] span,
+ #social-sidebar a[class*="facebook"] span:before {background: #3B5998;}
+  
+ #social-sidebar a[class*="chat-dots"]:hover,
+ #social-sidebar a[class*="chat-dots"] span,
+ #social-sidebar a[class*="chat-dots"] span:before {background:  #1bac91;}
+  
+ #social-sidebar a[class*="instagram"]:hover,
+ #social-sidebar a[class*="instagram"] span,
+ #social-sidebar a[class*="instagram"] span:before {background:   #C13584;}
+  
+ #social-sidebar a[class*="whatsapp"]:hover,
+ #social-sidebar a[class*="whatsapp"] span,
+ #social-sidebar a[class*="whatsapp"] span:before {background: #25D366;}
 /* Side Sticky Social Handler End  */
+
+
+
+/* Side Sticky Mail Start  */
+
+
+
+.nb-form {
+  position: fixed;
+  z-index: 9999;
+  width: 300px;
+  background: #FFF;
+  border: 1px solid #1bac91;
+  right: 20px;
+  bottom: -367px;
+  transition: all .8s cubic-bezier(.22, .67, .43, 1.22) .2s;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),0 1px 5px 0 rgba(0,0,0,0.12),0 3px 1px -2px rgba(0,0,0,0.2);
+}
+.nb-form:hover {
+  bottom: 0px;
+}
+
+/*-- User Icon --*/
+
+.nb-form .user-icon {
+  position: absolute;
+  top: -49px;
+  right: 12px;
+  display: block;
+  width: 58px;
+  margin: 20px auto 15px;
+  border-radius: 100%;
+}
+
+/*-- Title --*/
+
+.nb-form .title {
+  background: #1bac91;
+  font-size: 16px !important;
+  padding: 20px 18px !important;
+  color: #fff !important;
+  border-radius: 10px 10px 0 0;
+}
+
+/*-- Text --*/
+
+.nb-form p {
+  font-size: 13px;
+  margin: 0;
+  padding: 15px;
+  color: #666;
+}
+
+.nb-form p.message {
+  margin-left: 7px;
+}
+
+/*-- Form Elements --*/
+
+.nb-form form {
+  padding: 0 15px 15px 15px;
+}
+
+.nb-form input,
+.nb-form textarea {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  width: 254px;
+  max-width: 254px;
+  margin-bottom: 10px;
+  margin-left: 7px;
+  padding: 6px;
+  border: none;
+  border-radius: 4px;
+  color: #999;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.nb-form input:focus,
+.nb-form textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.nb-form input[type='submit'] {
+  display: block;
+  width: 120px;
+  margin: 0 auto;
+  padding: 0 20px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all .4s ease;
+  color: #fff !important;
+  border: none;
+}
+
+.nb-form input[type='submit']:hover {
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.07),0 1px 7px 0 rgba(0,0,0,0.02),0 3px 1px -1px rgba(0,0,0,0.1);
+}
+
+.nb-form textarea {
+  min-height: 110px;
+}
+
+
+.nb-form ::-webkit-input-placeholder {
+  color: #1bac91;
+}
+
+.nb-form ::-moz-placeholder{
+  color: #ccb0b0;
+}
+
+.nb-form :-ms-input-placeholder {
+  color: #ccb0b0;
+}
+
+.nb-form :-moz-placeholder {
+  color: #ccb0b0;
+}
+
+.nb-form input[type='submit'] {
+  background: #1bac91;
+}
+
+@media screen and (max-width: 676px) {
+  .nb-form:hover .user-icon {
+      display: none;
+  }
+
+  .nb-form .message {
+      display: none;
+  }
+
+  .nb-form form {
+      padding-top: 15px;
+  }
+  .nb-form{
+      right: 50%;
+      bottom: -320px;
+      left: 50%;
+      transform: translateX(-50%);
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .nb-form {
+    visibility: hidden;
+  }
+}
+
+/* Side Sticky Mail End  */
+
+
+
+/* Vector Start  */
+.feature_service{
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  margin: 100px 0 0 0 ;
+  min-height: 650px;
+  flex-wrap: wrap;
+}
+
+.Images_feature{
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin: 100px 0;
+  flex-wrap: wrap;
+  /* margin: 0 150px; */
+}
+
+
+.Images_feature img{
+  width: 250px;
+  height: auto;
+}
+
+.Vector{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94 ) 0s ;
+
+}
+
+.Vector:hover{
+  transform: scale(1.05);
+}
+
+
+.Vector span {
+  padding: 15px 0;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* Vector End  */
+
+
+
+
